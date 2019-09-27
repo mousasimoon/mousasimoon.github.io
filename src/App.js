@@ -58,7 +58,7 @@ class App extends Component{
         cache: 'default',
     };
 
-    fetch('localhost:8000/auth/', options).then(r => {
+    fetch('http://localhost:8000/auth/', options).then(r => {
       r.json().then(data => {
         console.log(data);
         const token= data["jwt_token"];
