@@ -705,14 +705,14 @@ class Service extends Component {
 
   getData (gu, dong) {
     this.setState({loading: true});
-    axios.post('http://ec2-13-209-26-92.ap-northeast-2.compute.amazonaws.com/api/?gu_dong=' + gu + dong).then((res) => {
+    axios.post('ec2-13-209-26-92.ap-northeast-2.compute.amazonaws.com/api/?gu_dong=' + gu + dong).then((res) => {
       this.setState({ data:res.data});
     })
     this.setState({loading: false});
   }
 
   like (property) {
-    axios.post('http://ec2-13-209-26-92.ap-northeast-2.compute.amazonaws.com/like/?user=' + this.props.location.user_id + '&property=' + property);
+    axios.post('ec2-13-209-26-92.ap-northeast-2.compute.amazonaws.com/like/?user=' + this.props.location.user_id + '&property=' + property);
     this.setState({
       openDialog: true
     });
