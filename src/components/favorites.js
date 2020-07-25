@@ -22,14 +22,14 @@ class Favorites extends Component {
       this.props.history.push('/');
     }
     this.setState({loading: true});
-    axios.post('http://ec2-13-209-26-92.ap-northeast-2.compute.amazonaws.com/favorites/?user=' + this.props.location.user_id).then((res) => {
+    axios.post('https://ec2-13-209-26-92.ap-northeast-2.compute.amazonaws.com/favorites/?user=' + this.props.location.user_id).then((res) => {
       this.setState({ data:res.data});
     })
     this.setState({loading: false});
   }
 
   like (property) {
-    axios.post('http://ec2-13-209-26-92.ap-northeast-2.compute.amazonaws.com/like/?user=' + this.props.location.user_id + '&property=' + property);
+    axios.post('https://ec2-13-209-26-92.ap-northeast-2.compute.amazonaws.com/like/?user=' + this.props.location.user_id + '&property=' + property);
     this.setState({
       openDialog: true
     });
