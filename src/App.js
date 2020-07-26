@@ -58,7 +58,7 @@ class App extends Component{
         cache: 'default',
     };
 
-    fetch('https://ec2-13-209-26-92.ap-northeast-2.compute.amazonaws.com/auth/', options).then(r => {
+    fetch('https://ec2-3-34-99-135.ap-northeast-2.compute.amazonaws.com/auth/', options).then(r => {
       r.json().then(data => {
         console.log(data);
         const token= data["jwt_token"];
