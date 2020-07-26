@@ -54,10 +54,11 @@ class App extends Component{
     const options = {
         method: 'POST',
         body: tokenBlob,
-        mode: 'cors',
+        mode: 'no-cors',
         cache: 'default',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Credentials': 'true',
+        headers: {
+          "Content-Type": "application/json"
+        }
     };
 
 
