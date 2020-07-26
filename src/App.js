@@ -55,7 +55,7 @@ class App extends Component{
     const options = {
         method: 'POST',
         body: tokenBlob,
-        mode: 'no-cors',
+        mode: 'cors',
         cache: 'default',
         headers: {
           "Content-Type": "application/json"
