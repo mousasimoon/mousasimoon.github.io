@@ -56,7 +56,7 @@ class App extends Component{
         body: tokenBlob,
         mode: 'cors',
         cache: 'default',
-        'Access-Control-Allow-Origin': 'https://ec2-3-34-99-135.ap-northeast-2.compute.amazonaws.com',
+        'Access-Control-Allow-Origin': 'https://www.daimo.kr',
         'Access-Control-Allow-Credentials': 'true',
     };
 
